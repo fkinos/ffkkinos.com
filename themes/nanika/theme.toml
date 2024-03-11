@@ -1,0 +1,11 @@
+name = "nanika"
+license = "MIT"
+description = "fkinos.com's theme"
+homepage = "https://fkinos.com"
+tags = []
+features = []
+min_version = "0.21"
+
+[author]
+  name = "fkinos"
+  homepage = "https://fkinos.com"

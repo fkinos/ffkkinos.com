@@ -1,0 +1,125 @@
+
+@font-face {
+	font-family: Atkinson Hyperlegible;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Atkinson Hyperlegible Regular"), local("AtkinsonHyperlegible-Regular"), url(/font/atkinson-hyperlegible/regular-latin.woff2) format("woff2");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Atkinson Hyperlegible;
+	font-style: italic;
+	font-weight: 400;
+	src: local("Atkinson Hyperlegible Italic"), local("AtkinsonHyperlegible-Italic"), url(/font/atkinson-hyperlegible/italic-latin.woff2) format("woff2");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: Atkinson Hyperlegible;
+	font-style: normal;
+	font-weight: 700;
+	src: local("Atkinson Hyperlegible Bold"), local("AtkinsonHyperlegible-Bold"), url(/font/atkinson-hyperlegible/bold-latin.woff2) format("woff2");
+	unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2212,U+2215;
+	font-display: swap;
+}
+
+:root {
+    --bg-color: #fff;
+    --fg-color: #000;
+    --link-color: #0000ee;
+    --shade-color: #efefef;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #111;
+        --fg-color: #fff;
+        --link-color: #5e5eff;
+	    --shade-color: #222;
+    }
+}
+
+body {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 5em;
+    line-height: 0.9;
+
+    text-transform: uppercase;
+}
+
+h1 .shh {
+    float: right;
+    display: block;
+    font-weight: normal;
+    font-size: 15%;
+    text-transform: lowercase;
+}
+
+h2 {
+    font-size: 3.5em;
+    line-height: 1.1;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+pre {
+    overflow: auto;
+    background-color: var(--shade-color);
+    padding: 10px;
+    font-size: 100%;
+}
+
+.intro {
+    max-width: 350px;
+}
+
+.content {
+    max-width: 45ch;
+}
+
+.date {
+    border-bottom: 1px dotted var(--fg-color);
+    text-decoration: none;
+}
+
+.breadcrumb a {
+  color: var(--fg-color);
+}
+
+.breadcrumb a:hover {
+  color: var(--bg-color);
+  background-color: var(--fg-color);
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: "/";
+}
