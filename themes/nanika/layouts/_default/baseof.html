@@ -1,13 +1,6 @@
 {{ partial "head.html" . }}
 
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <ul>
-    {{- range .Ancestors.Reverse }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{- end }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </ul>
-</nav>
+{{ partial "header.html" . }}
 
 {{ block "main" . }}
 {{ end }}

@@ -1,21 +1,6 @@
 {{ partial "head.html" . }}
 
-
-<nav aria-label="Breadcrumb" class="breadcrumb">
-  <ul>
-    <li><a href="/">{{ .Title }}/</a></li>
-  </ul>
-</nav>
-
-<div class="intro">
-
-<h1>
-  My Website
-  <span class="shh">(if it wasn't obvious enough)</span>
-</h1>
-
-{{ .Content }}
-
-</div>
+{{ .Scratch.Set "heading" "h1" }}
+{{ partial "header.html" . "f" }}
 
 {{ partial "foot.html" . }}
