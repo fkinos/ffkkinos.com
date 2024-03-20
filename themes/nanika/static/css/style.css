@@ -39,6 +39,15 @@ h1, h2, h3 {
     font-size: 1.5em;
 }
 
+.heading {
+    text-decoration: none;
+    color: var(--fg-color);
+}
+
+.heading:hover {
+    text-decoration: underline;
+}
+
 .date {
     border-bottom: 1px dotted var(--fg-color);
 }
