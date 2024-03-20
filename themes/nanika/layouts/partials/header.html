@@ -1,11 +1,14 @@
 <div>
   {{ $value := .Scratch.Get "heading" }}
   {{ if eq $value "h1" }}
-    <h1 class="h2-size">Website</h1>
+    <h1 class="h2-size"><a href="/" class="heading">Website</a></h1>
   {{ else }}
-    <h2>Website</h2>
+    <h2><a href="/" class="heading">Website</a></h2>
   {{ end }}
   <span>Felipe</span>
+
+  <br>
+  <br>
 
   <p>
     <a href="/notes/">Notes</a>
