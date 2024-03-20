@@ -1,19 +1,16 @@
 +++
 date = "2024-03-09T00:00:00-03:00"
 title = "Lisp"
-description = "Some thoughts about Lisp and some cool little things I like about it."
 +++
 
-Lisp stands for **Lis**t **P**rocessing, and lists are what makes Lisp so powerful yet simple and elegant.
+Lisp stands for **Lis**t **P**rocessing, and lists are what makes it so powerful yet simple and elegant.
 
 Pairs
 -----
 
-Lists are not atomic, they're made up of smaller connected parts known as pairs, pairs have two components, the first part and the rest. The first part is usually some other Lisp atom like an integer, string, etc and the rest is, well, the rest.
+Lists are not atomic, they're made up of smaller connected parts known as pairs, pairs have two components, the first part and the rest. Both components can be any Lisp atom like an integer, string, etc, including other pairs with their own first and rest components.
 
-The rest is just another pair with a first component and a rest component, if you're familiar with data structures you'll probably recognize this as a linked list. Linked lists can perform badly but Lisp has tools to deal with that.
-
-Pairs are denoted by a parenthesized list separated by a dot, also called dotted notation. Here's an example showing a pair with its first component being the integer 1 and its rest component being also the integer 1:
+Pairs are denoted by a parenthesized list separated by a dot, also known as dotted notation. Here's an example showing a pair with its first component being the integer 1 and its rest component being also the integer 1:
 
 ```
 '(1 . 1)
