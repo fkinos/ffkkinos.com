@@ -48,6 +48,10 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
+header {
+    text-align: center;
+}
+
 .date {
     border-bottom: 1px dotted var(--fg-color);
 }
