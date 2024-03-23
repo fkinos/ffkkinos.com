@@ -8,15 +8,15 @@ Lisp stands for **Lis**t **P**rocessing, and lists are what makes it so powerful
 Pairs
 -----
 
-Lists are not atomic, they're made up of smaller connected parts known as pairs, pairs have two components, the first part and the rest. Both components can be any Lisp atom like an integer, string, etc, including other pairs with their own first and rest components.
+Lists are not atomic, they're made up of smaller connected parts known as pairs, pairs have two components known as first and rest. Both components can be any Lisp atom like an integer, a string, etc, including other pairs, each with their own first and rest component.
 
-Pairs are denoted by a parenthesized list separated by a dot, also known as dotted notation. Here's an example showing a pair with its first component being the integer 1 and its rest component being also the integer 1:
+Pairs are denoted by a parenthesized list separated by a dot, also known as dotted notation. Here's an example showing a pair with its first component being the integer 1 and its rest component being the symbol _lemon_:
 
 ```
-'(1 . 1)
+'(1 . lemon)
 ```
 
-Here's a pair with its first component being the integer 1 and its rest component being another pair with components 2 and 3:
+Here is another pair with its first component being the integer 1, just like we saw in the previous example, but this time its rest component is another pair with first and rest components being the integers 2 and 3, respectively.
 
 ```
 '(1 . (2 . 3))
@@ -33,20 +33,39 @@ With only the innermost pair presenting a dot.
 Lists
 -----
 
-Lisp is all about lists, right? but where are they?? Calm down, we're getting there!
+But Lisp is all about lists, right? where are they?? Calm down, we're getting there!
 
-Lists are just pairs with the innermost pair having their rest component be _nil_.
+Lists are just pairs with their innermost pair having their rest component as _nil_.
 
 ```
 '(1 . (2 . (3 . nil)))
 ```
 
-You can think of _nil_ a something similar to C's NULL.
+Lists are represented without all the dots and parenthesis:
+
+```
+'(1 2 3)
+```
+
+You can think of _nil_ as something similar to C's NULL, a value that represents nothign in the language.
 
 Data
 ---------
 
-You might have noticed the quote character in the beggining of the previous Lisp expressions. By having that quote there we create what is known as a _quoted_ expression, _quoted_ expressions are not code, they tell Lisp that whatever we are _quoting_ is data!
+You might have noticed that simple quote character in the beggining of the previous Lisp expressions. By quoting some value, be it an atom or a list or pair, we are transforming whatever that value was to a symbol. Symbols are usually represented with strings, but unlike them, symbol are atomic, you cannot get its first caracter like you would with a string, for example. Let's take a look at what _quote_ does to some expressions:
+
+```
+* 'lemon
+lemon
+* '1
+1
+* '(1 . 2)
+(1 . 2)
+* '(1 . (2 . (3 . nil)))
+(1 2 3)
+```
+
+Quoting something transforms that thing in into data, it's not treated as code but we can still manipulate it and even evaluate _quoted_ expressions to get their value back.
 
 ```
 (1 2 3)
