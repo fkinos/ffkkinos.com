@@ -1,6 +1,8 @@
 {{ partial "head.html" . }}
 
-{{ partial "header.html" . }}
+{{ with .Parent }}
+    <a href="{{ .RelPermalink }}">&larr; Go Back</a>
+{{ end }}
 
 {{ block "main" . }}
 {{ end }}

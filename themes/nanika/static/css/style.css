@@ -12,31 +12,20 @@
     }
 }
 
-body {
-    max-width: 50ch;
+* {
+    box-sizing:border-box;
+}
 
-    margin: 40px auto;
-    padding: 0 10px;
+body {
+    max-width: 500px;
+
+    margin: 0 auto;
+    padding: 1rem;
     
     font-family: serif;
-    font-size: 18px; 
-    line-height: 1.6;
 
     color: var(--fg-color);
     background-color: var(--bg-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 3em;
-    margin-bottom: 1em;
-}
-
-h1, h2, h3 {
-    line-height: 1.2
-}
-
-.h2-size {
-    font-size: 1.5em;
 }
 
 .heading {
@@ -50,6 +39,10 @@ h1, h2, h3 {
 
 header {
     text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0;
 }
 
 .date {

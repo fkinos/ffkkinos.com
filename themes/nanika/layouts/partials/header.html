@@ -1,10 +1,5 @@
 <header>
-  {{ $value := .Scratch.Get "heading" }}
-  {{ if eq $value "h1" }}
-    <h1 class="h2-size"><a href="/" class="heading">Website</a></h1>
-  {{ else }}
-    <h2><a href="/" class="heading">Website</a></h2>
-  {{ end }}
+  <h1><a href="/" class="heading">Website</a></h1>
   <span>by Felipe</span>
 
   <br>
@@ -12,9 +7,9 @@
 
   <p>
     <a href="/notes/">Notes</a>
-    -
+    |
     <a href="/now">Now Page</a>
-    -
+    |
     <a href="https://merveilles.town/@fkinoshita">Mastodon</a>
   </p>
 </header>
