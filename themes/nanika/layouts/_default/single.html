@@ -3,10 +3,6 @@
 <h1>{{ .Title }}</h1>
 <span class="date">Last updated on {{ .Lastmod | time.Format "January 2, 2006" }}.</span>
 
-<p>
-{{ .Description }}
-</p>
-
 {{ .Content }}
 
 {{ end }}
