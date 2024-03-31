@@ -33,7 +33,7 @@ Calling our _vec-scalar_ function gives us the expected answer!
 ```
 
 ### Adding, Subtracting, and Multiplying Vectors
-The following operations are all very similar to each other, the only difference is the function called when computing the resulting vector's value. Let's first make a function to calculate vector addition:
+This is pretty similar to the _vec-scalar_ function we defined earlier, but this time we're using _mapcar_ instead of _map_.
 
 ```
 (defun vec-add (a b)
@@ -42,8 +42,6 @@ The following operations are all very similar to each other, the only difference
           a
           b))
 ```
-
-This is pretty similar to the _vec-scalar_ function we defined earlier, but this time we're using _mapcar_ instead of _map_.
 
 _mapcar_ expects a function that will run on each pair, with the first component being the nth item in the list a and second component being the nth item in the list b.
 
@@ -102,6 +100,43 @@ Calling _vec-dot_ should give you the following output:
 32
 ```
 
+## Macro Time!
+
+The functions for addition, subtraction, multiplication are all very similar, with the only difference being the operation itself applied in the internal _lambda_ on the _map_ function. Let's create a macro to deal with that!
+
+```
+(defmacro vec-op (op a b)
+  `(map 'list #'(lambda (x y)
+                  (,op x y))
+      ,a
+      ,b))
+```
+
+Here we're getting the operation as a parameter, and we _unquote_ it inside the lambda passed to _map_, this is telling the macro to treat it as a function and not just as a symbol, we do the same for _a_ and _b_.
+
+We can call this macro passing different functions to it, like the built-in _+_, _-_, and _*_ functions.
+
+```
+* (vec-op + '(1 2 3) '(4 5 6))
+(5 7 9)
+* (vec-op - '(1 2 3) '(4 5 6))
+(-3 -3 -3)
+* (vec-op * '(1 2 3) '(4 5 6))
+(4 10 18)
+```
+
+Or even with a lambda created at call site.
+
+```
+* (vec-op (lambda (x y)
+            (+ (* x x) (* y y)))
+          '(1 2 3)
+          '(4 5 6))
+(17 29 45)
+```
+
+With this we've turned three functions that we doing basically the same thing into a more generic function that can do even more!
+
 ## Exercise for the reader
 
-If you try to pass in a number in the place of a list in any of the function we defined above we would get an error saying it expected a list and not a number. In what ways can we prevent that?
+If you try to pass in anything other than a list to any of the functions we defined earlier we get an error saying it expected a list. What could we do to prevent this from happening?
