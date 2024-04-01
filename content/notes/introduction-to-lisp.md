@@ -1,6 +1,6 @@
 +++
 date = "2024-03-09T00:00:00-03:00"
-title = "Lisp"
+title = "Introduction to Lisp"
 +++
 
 Lisp stands for **Lis**t **P**rocessing, and lists are what makes it so powerful yet simple and elegant.
