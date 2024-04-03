@@ -3,3 +3,4 @@ languageCode = "en-us"
 title = "ffkkinos"
 theme = "nanika"
 tableOfContents = true
+enableGitInfo = true
