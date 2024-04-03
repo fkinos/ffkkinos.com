@@ -1,6 +1,7 @@
 +++
 date = "2024-03-28T00:00:00-03:00"
 title = "Lisp and Linear Algebra"
+toc = true
 +++
 
 While learning linear algebra I was calculating a bunch of vector operations by hand and I was getting a bit tired of that, that was when I tried to pratice Lisp a bit to see what I could do to make my life easier.
