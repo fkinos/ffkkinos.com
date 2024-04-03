@@ -8,7 +8,7 @@
     :root {
         --bg-color: #111;
         --fg-color: #fff;
-	    --shade-color: #222;
+        --shade-color: #222;
     }
 }
 
@@ -21,7 +21,7 @@ body {
 
     margin: 0 auto;
     padding: 1rem;
-    
+
     font-family: serif;
 
     color: var(--fg-color);
@@ -54,4 +54,14 @@ pre {
     background-color: var(--shade-color);
     padding: 10px;
     font-size: 100%;
+}
+
+img {
+  width: 100%;margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-style: italic;
+  vertical-align: baseline;
 }
