@@ -1,5 +1,38 @@
 {{ partial "head.html" . }}
 
-{{ .Content }}
+<header>
+  <h1><a href="/" class="heading">Website</a></h1>
+  <span>by Felipe</span>
+</header>
+
+<h2>Notes</h2>
+<p>Sometimes I write notes to remember concepts I find interesting.</p>
+<ul>
+{{ range (where .Site.RegularPages "Type" "notes") }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+{{ end }}
+</ul>
+
+<h2>Now</h2>
+<p>
+  A Now page contains information you would tell someone that you don't
+  see in a long time about what're doing recently. <a href="/now">See more</a>.
+</p>
+
+<h2>Uses</h2>
+<p>
+  A Uses page contains information on what things you use, be it on software, hardware, art materials, etc. <a href="/uses">See more</a>.
+</p>
+
+<footer>
+
+  <p>
+    You can find me on
+    <a rel="me" href="https://merveilles.town/@fkinoshita">Mastodon</a>.
+  </p>
+
+</footer>
 
 {{ partial "foot.html" . }}
