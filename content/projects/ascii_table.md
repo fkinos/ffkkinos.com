@@ -44,9 +44,9 @@ E: . > N ^ n ~
 F: / ? O _ o DEL
 ```
 
-Using the `-d` or `--decimal` flag, it displays the ASCII table with decimal values.
+Using the `-d` or `--dec` flag, it displays the ASCII table with decimal values.
 ```
-% ii --decimal
+% ii --dec
   30 40 50 60 70 80 90 100 110 120
  ---------------------------------
 0:    (  2  <  F  P  Z  d   n   x
