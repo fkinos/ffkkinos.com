@@ -62,7 +62,7 @@ Using the `-d` or `--decimal` flag, it displays the ASCII table with decimal val
 ```
 
 ## Source Code
-The implementation is just over a few hundred lines of ANSI C code.
+The implementation is just over a hundred lines of ANSI C code.
 It includes a Makefile, all you need to do to install it is:
 
 ```
