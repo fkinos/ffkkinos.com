@@ -15,6 +15,16 @@
 {{ end }}
 </ul>
 
+<h2>Projects</h2>
+<p>Small projects I created to solve even smaller problems.</p>
+<ul>
+{{ range (where .Site.RegularPages "Type" "projects") }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+{{ end }}
+</ul>
+
 <h2>Now</h2>
 <p>
   A Now page contains information you would tell someone that you don't
