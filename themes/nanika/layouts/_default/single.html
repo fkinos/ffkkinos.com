@@ -1,19 +1,11 @@
 {{ define "main" }}
 
-<nav>
-
 <h1>{{ .Title }}</h1>
-<span class="date">Last updated on {{ .Lastmod | time.Format "January 2, 2006" }}.</span>
 
 {{ if .Params.toc }}
-  <h2>Table of Contents</h2>
-  {{ .TableOfContents }}
+{{ .TableOfContents }}
 {{ end }}
 
-</nav>
-
-<main>
-  {{ .Content }}
-</main>
+{{ .Content }}
 
 {{ end }}
