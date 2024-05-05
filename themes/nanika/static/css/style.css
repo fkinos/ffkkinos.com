@@ -21,7 +21,7 @@
 body {
   max-width: 650px;
 
-  padding-block: 1rem;
+  padding: 1rem;
 
   font-family: monospace;
   font-size: 16px;
