@@ -1,14 +1,8 @@
 {{ partial "head.html" . }}
 
-<!-- {{ with .Parent }}
-     <a href="/">&larr; Go Back</a>
-     {{ end }}
--->
-<!-- {{ block "main" . }}
-     {{ end }}
--->
-
-{{ partial "header.html" }}
+{{ with .Parent }}
+<a class="back" href="/">Go Back</a>
+{{ end }}
 
 {{ block "main" . }}
 {{ end }}

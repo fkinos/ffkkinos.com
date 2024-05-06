@@ -1,11 +1,14 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
+<h1 class="heading">{{ .Title }}</h1>
 
 {{ if .Params.toc }}
 {{ .TableOfContents }}
 {{ end }}
 
 {{ .Content }}
+
+{{ $footnoteReturnLink := (printf "${1}%s${2}" "back") }}
+{{ .Content | replaceRE "(<a (?:.*) class=\"footnote-backref\" (?:.*)>)(?:.*)(</a>)" $footnoteReturnLink | safeHTML }}
 
 {{ end }}
