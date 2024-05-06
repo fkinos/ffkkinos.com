@@ -40,19 +40,18 @@ Example:
 
 We first create a new symbol with *gensym*,
 *gensym* guarantees that this symbol will not be used ever again throughout our program,
-this is pretty useful to avoid name clashs between symbols we define, as the macro's author,
+this is pretty useful to avoid name clashes between symbols we define, as the macro's author,
 and symbols the user defines and passes to our macro.
 
-Right after that we assign a new hash table to the symbol we generated and loop through the *body*.
-We loop through *body*, that should look something like this:
+Right after that we assign a new hash table to the symbol we generated and loop through *body*.
+*body* should look something like this:
 ```
 (:a 1 :b 2 :c 3 ...)
 ```
-Extracting those key-value pairs e.g *(:a 1)*,
-assign them to *key* and *value*,
-and finally set *key* to *value* on the hash table.
+Then we will extract those key-value pairs from *body* to get *(:a 1)*, *(:b 2)*, and so on.
+And finally set *key* to *value* on the hash table.
 
-Now we can use this syntax to create new hash tables:
+Now we can use the following syntax to create new hash tables:
 ```
 * (dict :a 1
         :b 2)
@@ -60,7 +59,7 @@ Now we can use this syntax to create new hash tables:
 ```
 
 And since all we did was abstract the syntax,
-we can still use regular functions that act on hash maps with it:
+we can still use regular functions that act on hash tables with it:
 ```
 * (gethash :name
            (dict :name "felipe"
@@ -71,19 +70,17 @@ T
 
 ## Extra Parenthesis Around *let*
 
-When using *let* you probably noticed that each binding needs an extra pair of parenthesis,
-we can avoid that by converting a property list to the nested list *let* expects.
-
-So our end goal would be to type something like this:
-```
-(let (x 10
-      y 20)
-  (* x y))
-```
-Instead of:
+When using *let* you probably noticed that each binding needs an extra pair of parenthesis:
 ```
 (let ((x 10)
       (y 20))
+  (* x y))
+```
+
+We would like to write something like this instead:
+```
+(let (x 10
+      y 20)
   (* x y))
 ```
 
@@ -112,6 +109,15 @@ pretty similar to what we did in the hash table macro.
 The macro itself is pretty simple:
 ```
 (defmacro letn (bindings &body body)
+  "Like let, letn creates new variable bindings but remove extra parenthesis around each binding.
+
+Example:
+
+  (letn (x 5
+         y 10)
+    (+ x y))
+
+"
   `(let ,(nest-plist bindings)
      ,@body))
 ```
@@ -121,10 +127,14 @@ and then we just splice *body* inside *let*.
 
 ## Conclusion
 
-The magic thing about macros is that, in the end of the day, they're just code.
+The magic thing about macros is that,
+in the end of the day,
+they're just code.
 No matter how crazy and complicated one might be,
 they will become regular Lisp code you could've written yourself.
 
-Like functions, that let we abstract funcionality,
+Like functions,
+that let us abstract funcionality,
 macros let us abstract syntax.
+
 This allows us to map our programs to the problem domain like no other tool.
