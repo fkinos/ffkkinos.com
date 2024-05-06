@@ -8,7 +8,4 @@
 
 {{ .Content }}
 
-{{ $footnoteReturnLink := (printf "${1}%s${2}" "back") }}
-{{ .Content | replaceRE "(<a (?:.*) class=\"footnote-backref\" (?:.*)>)(?:.*)(</a>)" $footnoteReturnLink | safeHTML }}
-
 {{ end }}

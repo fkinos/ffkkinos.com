@@ -65,10 +65,6 @@ a.back::before {
   content: '<- ';
 }
 
-a.footnote-backref::before {
-  content: '<- ';
-}
-
 @media (min-width: 600px) {
   p, pre {
     margin-left: 6ch;

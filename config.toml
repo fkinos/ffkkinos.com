@@ -4,5 +4,3 @@ title = "ffkkinos"
 theme = "nanika"
 tableOfContents = true
 enableGitInfo = true
-renderParameters.FootnoteReturnLinkContents = "<-"
-FootnoteReturnLinkContents = "↑"
