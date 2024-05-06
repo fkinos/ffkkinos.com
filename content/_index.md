@@ -27,5 +27,5 @@ math, design, urbanism, etc.
 I also have a [now](/now) page and a [uses](/uses) page.
 
 {{< rawhtml >}}
-<p>You can find me on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">Mastodon</a></p>
+<p>You can find me on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">Mastodon</a>.</p>
 {{< /rawhtml >}}
