@@ -9,8 +9,6 @@ that's when I thought about making my life easier with a bit of Common Lisp code
 
 ## Vectors
 
-Common Lisp already has a data structure called vector, one-demensional arrays which can be accessed in constant time. We are not talking about this vector, though.
-
 For this little experiment I'm going to represent vectors using regular lists.
 
 ## Operations
@@ -22,133 +20,186 @@ where you multiply all components in a vector by a scalar value,
 that is, just a real number.
 
 ```
-(defun vec-scalar (vec scalar)
-  (map 'list #'(lambda (component)
-                 (* component scalar))
-        vec))
+(defun v@ (u alpha)
+  "Returns scalar multiplication of U by ALPHA."
+  (map 'list #'(lambda (x)
+                 (* x alpha))
+        u))
 ```
 
 _map_ expects a return type (here we're returning a list),
-a function that will run on each element of the list (here we're using simple lambda that multiplies _component_ by _scalar_),
-and the sequence we want to apply our function to.
+a function that will run on each element of the list (here we're using simple lambda that multiplies _x_ by _alpha_),
+and the sequence we want to apply our function to, which is _u_.
 
-Calling our _vec-scalar_ function gives us the expected answer:
+Calling _v@_ gives us the expected answer:
 ```
-* (vec-scalar '(1 2 3) 5)
+* (v@ '(1 2 3) 5)
 (5 10 15)
 ```
 
-### Adding, Subtracting, and Multiplying Vectors
+### Operations on Two Vectors
 
-This is pretty similar to the _vec-scalar_ function we defined earlier,
-but this time we're using _mapcar_ instead of _map_.
+Next we will implement adding, subtracting, and multiplying vectors.
 
+The _v+_ function is pretty similar to the _v@_ function we defined earlier:
 ```
-(defun vec-add (a b)
+(defun v+ (u v)
+  "Returns the addition of the vectors U and V."
   (mapcar #'(lambda (x y)
               (+ x y))
-          a
-          b))
+          u
+          v))
 ```
 
 _mapcar_ expects a function that will run on each pair,
-with the first component being the nth item in list a and second component being the nth item in list b.
+with the first value being the nth component in a vector U,
+and second value being the nth component in a vector V.
 
-Calling _vec-add_ should give you the following output:
+Calling _v+_ should give you the following output:
 ```
-* (vec-add '(1 2 3) '(4 5 6))
+* (v+ '(1 2 3) '(4 5 6))
 (5 7 9)
 ```
 
-The functions for substraction and multiplication are very similar as well.
+The functions for substraction and multiplication are pretty much the same.
 
 #### Vector Substraction
 
 ```
-(defun vec-sub (a b)
+(defun v- (u v)
+  "Returns the subtraction of the vectors U and V."
   (mapcar #'(lambda (x y)
               (- x y))
-          a
-          b))
+          u
+          v))
 ```
 
 #### Vector Multiplication
 
 ```
-(defun vec-mult (a b)
+(defun v* (u v)
+  "Returns the multiplication of the vectors U and V."
   (mapcar #'(lambda (x y)
               (* x y))
-          a
-          b))
+          u
+          v))
 ```
 
 ### Dot Product
 
-The dot product of two vectors is calculated by multiplying the nth item in list a with the nth item in list b and returning the sum of those products.
+The dot product of two vectors is calculated by multiplying the nth component in a vector U with the nth component in a vector V,
+and returning the sum of those products.
 
-We just did something very similar to this on the last function using _mapcar_,
-we just need a way to sum all items in the resulting list,
-and there's exactly what _apply_ does.
 ```
-(defun vec-dot (a b)
+(defun v. (u v)
+  "Returns the dot product between the vectors U and V."
   (apply #'+
          (mapcar #'(lambda (x y)
                      (* x y))
-                 a
-                 b)))
+                 u
+                 v)))
 ```
 
-The _apply_ function _applies_ some function, in this case _+_, to all items in the list.
+The only difference between _v._ and the previous functions is the use of _apply_.
+_apply_ _applies_ some function, in this case _+_, to all items in the list.
+
 It's like running:
 ```
 (+ 1 2 3)
 ```
 But using the elements from the list _mapcar_ returns.
 
-Calling _vec-dot_ should give you the following output:
+Calling _v._ should give you the following output:
 ```
-* (vec-dot '(1 2 3) '(4 5 6))
+* (v. '(1 2 3) '(4 5 6))
 32
 ```
 
-## Macro Time!
+### Modulus, or Magnitude
 
-The functions for addition, subtraction, multiplication are all very similar,
-with the only difference being the operation itself applied in the internal _lambda_ on the _map_ function.
-Let's create a macro to deal with that!
-```
-(defmacro vec-op (op a b)
-  `(map 'list #'(lambda (x y)
-                  (,op x y))
-      ,a
-      ,b))
-```
+To get the modulus, or magnitude of a vector we get the square root of the sum of all components squared.
 
-Here we're getting the operation as a parameter, and we _unquote_ it inside the lambda passed to _map_,
-this is telling the macro to treat it as a function and not just as a symbol,
-we do the same for _a_ and _b_.
-
-We can call this macro passing different functions to it, like the built-in _+_, _-_, and _*_ functions.
 ```
-* (vec-op + '(1 2 3) '(4 5 6))
-(5 7 9)
-* (vec-op - '(1 2 3) '(4 5 6))
-(-3 -3 -3)
-* (vec-op * '(1 2 3) '(4 5 6))
-(4 10 18)
+(defun v-modulus (u)
+  "Returns the modulus, or magnitude of the vector U."
+  (sqrt (apply #'+
+               (map 'list #'(lambda (n)
+                              (expt n 2))
+                    u))))
 ```
 
-Or even with a lambda created at call site.
+Here we see the use of the _expt_ function,
+it expects a base and a exponent.
+
+Calling _v-modulus_ should give you the following output:
 ```
-* (vec-op (lambda (x y)
-            (+ (* x x) (* y y)))
-          '(1 2 3)
-          '(4 5 6))
-(17 29 45)
+* (v-modulus '(1 2))
+2.236068
 ```
 
-With this we've turned three functions that we doing basically the same thing into a more generic function that can do even more!
+### Getting The Angle Between Two Vectors
 
-## Exercise for the reader
+Getting the angle between two vectors is a bit more complex.
 
-If you try to pass in anything other than a list to any of the functions we defined earlier we get an error saying it expected a list. What could we do to prevent this from happening?
+We need to get the arccosine of the dot product of U and V over the product of the modulus of U and V. A bit long-winded isn't it, I find the code a bit easier to read.
+
+```
+(defun v0 (u v)
+  "Returns the angle between the vectors U and V."
+  (acos (/ (v. u v)
+           (*
+            (v-modulus u)
+            (v-modulus v)))))
+```
+
+The code is almost a translation of the explanation above,
+luckily for us,
+Common Lisp provides an arccosine function called _acos_.
+
+Calling _v0_ should give you the following output:
+```
+* (v0 '(1 0) '(0 3))
+1.5707964
+```
+
+And that's probably not what you expected, right?
+That's because it's returning the angle in radians,
+so all that's left to do is create a function to convert radians to degrees.
+```
+(defun radians-to-degress (radians)
+  "Converts RADIANS to degrees."
+  (nth-value 0 (round (* radians (/ 180 PI)))))
+```
+
+We can do the conversion by multiplying the angle in radians by 180 over PI.
+
+The _round_ function _rounds_ the resulting value,
+_round_ returns multiple values,
+the rounded number and the remainder.
+
+Since we only care about the rounded number we can ignore the remainder,
+the _nth-value_ function let's do exactly that!
+Getting the zeroth return value from _round_.
+
+Let's modify _v0_ to make use of the _radians-to-degrees_ function:
+```
+(defun v0 (u v)
+  "Returns the angle between the vectors U and V."
+  (radians-to-degress
+   (acos (/ (v. u v)
+            (*
+             (v-modulus u)
+             (v-modulus v))))))
+```
+
+Now _v0_ should give the answer in degrees, like we expected:
+```
+* (v0 '(1 0) '(0 3))
+90
+```
+
+## Conclusion
+
+To me that was a pretty good exercise,
+making me understand both Linear Algebra and Common Lisp a bit better.
+I hope it was useful for you too!
