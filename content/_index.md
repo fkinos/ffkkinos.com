@@ -12,7 +12,7 @@ Here are some notes:
 
 ## Projects
 
-I wrote some small projects to solve even smaller projects.
+I wrote some small projects to solve even smaller problems.
 
 Check them out:
 {{< posts "projects" >}}
