@@ -29,9 +29,11 @@ I wanted something similar for Common Lisp without having to think too much abou
 
 We can declare a new hash map with this simpler syntax:
 ```
-(defparameter *dict* (dict :name "felipe"
-                           :website "ffkkinos.com"
-                           :foo 1))
+(defparameter *dict*
+              (dict:new
+                :name "felipe"
+                :website "ffkkinos.com"
+                :foo 1))
 ```
 
 _dict_ expects key-value pairs like found in property lists.
@@ -41,20 +43,20 @@ _dict_ expects key-value pairs like found in property lists.
 We can use the _dict-insert_ function to insert a new value,
 or update an existing one:
 ```
-* (dict-insert *dict* :email "example@mail.com")
+* (dict:insert *dict* :email "example@mail.com")
 "example@mail.com"
 ```
 
 Similarly, to get the value of a key we can use the _dict-get_ function:
 ```
-* (dict-get *dict* :name)
+* (dict:value *dict* :name)
 "felipe"
 T
 ```
 
 And to remove a key we can use the _dict-pop_ function:
 ```
-* (dict-pop *dict* :name)
+* (dict:pop *dict* :name)
 T
 ```
 
@@ -62,13 +64,13 @@ T
 
 To get all keys from a hash map we can use the _dict-keys_ function:
 ```
-* (dict-keys *dict*)
+* (dict:keys *dict*)
 (:name :website :email :foo)
 ```
 
 Similarly, we can use the _dict-values_ function to get all values:
 ```
-* (dict-values *dict*)
+* (dict:values *dict*)
 ("example@mail.com" 1 "ffkkinos.com" "felipe")
 ```
 
@@ -76,7 +78,7 @@ Similarly, we can use the _dict-values_ function to get all values:
 
 We can also get both the key and the value by using the _dict-items_ function:
 ```
-* (dict-items *dict*)
+* (dict:items *dict*)
 ((:email "example@mail.com") (:foo 1) (:website "ffkkinos.com") (:name "felipe"))
 ```
 
@@ -87,13 +89,14 @@ The source-code is available [at this repository](https://sr.ht/~fkinos/dict).
 All functions include documentation strings,
 so if in doubt you can always use the _documentation_ function to get more information and examples on how to use said function:
 ```
-* (documentation 'dict 'function)
+* (documentation 'dict:new 'function)
 "dict provides a nicer syntax for declaring hash tables.
 
 Example:
 
-  (dict :a 1
-        :b 2)
+  (dict:new
+    :a 1
+    :b 2)
   ; => Creates a hash table with two keys (:a and :b) and values (1 and 2) respectively.
 
 Equivalent to the following form:
