@@ -133,8 +133,5 @@ they're just code.
 No matter how crazy and complicated one might be,
 they will become regular Lisp code you could've written yourself.
 
-Like functions,
-that let us abstract funcionality,
-macros let us abstract syntax.
-
+Like functions, that allow us to abstract funcionality, macros let us abstract syntax.
 This allows us to map our programs to the problem domain like no other tool.
