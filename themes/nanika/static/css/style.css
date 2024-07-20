@@ -67,7 +67,7 @@ a.back::before {
 }
 
 @media (min-width: 600px) {
-  p, pre {
+  p, pre, table {
     margin-left: 6ch;
   }
 
@@ -100,4 +100,20 @@ img {
 
 #TableOfContents li > ul {
   margin-left: 6ch;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th, td {
+  border 0;
+  padding: 0;
+}
+
+thead th {
+  width: 3ch;
+  font-weight: normal;
 }
