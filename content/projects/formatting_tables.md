@@ -1,19 +1,19 @@
 +++
 date = "2024-05-18T00:00:00-03:00"
-title = "Formatting Tables in Common Lisp"
+title = "formatting tables in common lisp"
 +++
 
-## Motivation
+## motivation
 
-I've created a small library to format data in a tabular form,
-I wanted something like this for a quite some time while working on a data-heavy project.
+i've created a small library to format data in a tabular form,
+i wanted something like this for a quite some time while working on a data-heavy project.
 
-## How To Use It
+## how to use it
 
-Seisei (the library name) is super small,
+seisei (the library name) is super small,
 it only export a single function called `format-table`.
 
-It expects the output stream, and the data.
+it expects the output stream, and the data.
 
 ```
 * (seisei:format-table t
@@ -24,17 +24,17 @@ X    | INCOME | 50.0 | 2024-05-18T00:00:00
 Y    | INCOME | 25.0 | 2024-04-18T00:00:00
 ```
 
-The data is expected to be a list of lists, each element in the lists will become a column.
+the data is expected to be a list of lists, each element in the lists will become a column.
 
-## Optional Parameters
+## optional parameters
 
-There are a few optional parameters to change the behavior of the `format-table` function.
+there are a few optional parameters to change the behavior of the `format-table` function.
 
-### Column Labels
+### column labels
 
-The `:column-label` parameter allows us to specify a label for each column in the table.
+the `:column-label` parameter allows us to specify a label for each column in the table.
 
-It expects a list of strings, the first string will label the first column, and so on.
+it expects a list of strings, the first string will label the first column, and so on.
 
 ```
 * (defparameter +data+
@@ -48,11 +48,11 @@ X           | INCOME | 50.0   | 2024-05-18T00:00:00
 Y           | INCOME | 25.0   | 2024-04-18T00:00:00
 ```
 
-### Column Alignment
+### column alignment
 
-The `:column-align` parameter allows us to specify how to align each column in the table.
+the `:column-align` parameter allows us to specify how to align each column in the table.
 
-There are three possible alignment options, left-aligned, right-aligned, or center-aligned, these are defined in a package constant which we can use when calling `format-table`.
+there are three possible alignment options, left-aligned, right-aligned, or center-aligned, these are defined in a package constant which we can use when calling `format-table`.
 
 ```
 * (defparameter +data+
@@ -67,13 +67,13 @@ X           | INCOME |   50.0 | 2024-05-18T00:00:00
 Y           | INCOME |   25.0 | 2024-04-18T00:00:00
 ```
 
-Now we see that the third column is aligned to the right while the other ones are aligned to the left.
+now we see that the third column is aligned to the right while the other ones are aligned to the left.
 
-### Separator
+### separator
 
-By default, `format-table` uses the string `"|"` as the column separator.
+by default, `format-table` uses the string `"|"` as the column separator.
 
-We can override that by providing our own string to be used instead, using the `:separator` parameter.
+we can override that by providing our own string to be used instead, using the `:separator` parameter.
 
 ```
 * (defparameter +data+
@@ -89,11 +89,11 @@ X           @ INCOME @   50.0 @ 2024-05-18T00:00:00
 Y           @ INCOME @   25.0 @ 2024-04-18T00:00:00
 ```
 
-Now we see that each column is separated by the "@" string instead of the "|" default one.
+now we see that each column is separated by the "@" string instead of the "|" default one.
 
-## Source Code
+## source code
 
-The source-code is available [at this repository](https://git.sr.ht/~fkinos/seisei).
+the source-code is available [at this repository](https://git.sr.ht/~fkinos/seisei).
 
 `format-table` function provides a compreehenvisve documentation string which can be accessed
 so if in doubt you can always use the documentation function to get more information and examples on how to use it:

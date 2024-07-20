@@ -3,29 +3,29 @@ date = "2024-03-09T00:00:00-03:00"
 title = "ffkkinos"
 +++
 
-## Notes
+## notes
 
-Sometimes I write about things I find interesting like Lisp and Math.
+sometimes I write about things I find interesting like math and ccomputers.
 
-Here are some notes:
+here are some notes:
 {{< posts "notes" >}}
 
-## Projects
+## projects
 
-I wrote some small projects to solve even smaller problems.
+i wrote some small projects to solve even smaller problems.
 
 Check them out:
 {{< posts "projects" >}}
 
-## Felipe
+## felipe
 
-That's me!
+that's me!
 
-I'm not that interesting, I just like to learn new things, be them in software,
+i'm not that interesting, I just like to learn new things, be them in software,
 math, design, urbanism, etc.
 
-I also have a [now](/now) page and a [uses](/uses) page.
+you can also check my [now](/now) and [uses](/uses) pages!
 
 {{< rawhtml >}}
-<p>You can find me on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">Mastodon</a>.</p>
+<p>You can find me on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">mastodon</a>.</p>
 {{< /rawhtml >}}

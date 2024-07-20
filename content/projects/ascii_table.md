@@ -1,25 +1,25 @@
 +++
 date = "2024-04-09T00:00:00-03:00"
-title = "ASCII Table"
+title = "ascii table"
 +++
 
-Some time ago, when I was playing with binary formats,
-I was struggling a lot with ASCII values,
+some time ago, when i was playing with binary formats,
+i was struggling a lot with ASCII values,
 specially when represented with hexadecimal numbers.
 
-Around the same time,
-someone over at Mastodon (I don't remember who it was, sorry)
+around the same time,
+someone over at mastodon (I don't remember who it was, sorry)
 shared that the man page for ASCII had a neat table, including both decimal and hexidecimal representions.
-And it's great, the only problem is that it's at the bottom of the manual, making it less ideal to use it as a quick reference.
+And it's great, the only problem is that it's at the bottom of the manual, making it less than ideal to use it as a quick reference.
 
-That's when I decided to build a small commandline application to make the same!
+that's when I decided to build a small commandline application to make the same!
 
 ## asc*ii*-table
-The binary for the application is called _ii_,
+the binary for the application is called _ii_,
 originally I wanted to call it _ascii_ but that name was already taken.
 
 By default, _ii_ shows the ASCII table using hexadecimal values,
-I made it that way because I wanted to practice reading hexadecimal,
+i made it that way because i wanted to practice reading hexadecimal,
 and also the table itself is shorter.
 
 ```
@@ -44,7 +44,7 @@ E: . > N ^ n ~
 F: / ? O _ o DEL
 ```
 
-Using the `-d` or `--dec` flag, it displays the ASCII table with decimal values.
+using the `-d` or `--dec` flag, it displays the ASCII table with decimal values.
 ```
 % ii --dec
   30 40 50 60 70 80 90 100 110 120
@@ -61,15 +61,15 @@ Using the `-d` or `--dec` flag, it displays the ASCII table with decimal values.
 9: '  1  ;  E  O  Y  c  m   w
 ```
 
-## Source Code
-The implementation is just over a hundred lines of ANSI C code.
-It includes a Makefile, all you need to do to install it is:
+## source Code
+the implementation is just over a hundred lines of ANSI C code.
+it includes a Makefile, all you need to do to install it is:
 
 ```
 % make && make install
 ```
 
-By default, it installs the binary to `/usr/local/bin/` but it can be easily overriden.
+by default, it installs the binary to `/usr/local/bin/` but it can be easily overriden.
 
-You can find the full source code on
+you can find the full source code on
 [this repository](https://sr.ht/~fkinos/ascii-table) at [sr.ht](https://sr.ht).
