@@ -37,4 +37,4 @@ in this example the set A&cap;B is a subset of A and also a subset of B, since b
 
 sets are pretty handy to represent anything you want, all of mathematics is built upon the notion of sets anyway.
 
-a pretty common use case is to represent a group of numbers like the natural numbers, or the real numbers. it can also be used to represent a specific universe for some logic statement.
+a pretty common use case is to represent a group of numbers like the natural numbers, or the real numbers. it can also be used to represent a specific universe for some [logic](/notes/logic) statement.
