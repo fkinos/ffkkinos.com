@@ -5,7 +5,7 @@ title = "ffkkinos"
 
 ## notes
 
-sometimes I write about things I find interesting like math and ccomputers.
+sometimes I write about things I find interesting like math and computers.
 
 here are some notes:
 {{< posts "notes" >}}
