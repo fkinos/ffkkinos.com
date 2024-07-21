@@ -3,6 +3,8 @@ date = "2024-07-20T00:00:00-03:00"
 title = "sets"
 +++
 
+![set theory drawing](/set_theory.png)
+
 sets are a mathematical object that allows us to group a bunch of other mathematical objects together,
 they don't care what order those objects are inserted nor if they're any duplicates.
 
