@@ -3,7 +3,7 @@ date = "2024-07-20T00:00:00-03:00"
 title = "logic"
 +++
 
-![logic drawing](/logic.png)
+![drawing showing various mathematical logic symbols](/logic.png)
 
 mathematical logic is a way to precisely describe mathematical statements.
 
