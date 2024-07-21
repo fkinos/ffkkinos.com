@@ -1,6 +1,8 @@
 {{ define "main" }}
 
+{{ if (not (eq .Parent.Page.Path "/notes")) }}
 <h1 class="heading">{{ .Title }}</h1>
+{{end}}
 
 {{ if .Params.toc }}
 {{ .TableOfContents }}
