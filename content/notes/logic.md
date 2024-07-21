@@ -74,12 +74,12 @@ we can use truth tables to make sure this is correct.
 
 this truth table is organized in a few section, the first two columns are for our statements P and Q, the next one is for our premises, and the last one for our conclusion.
 
-|*P*|*Q*|*(P&or;(&not;Q&and;Q))&and;P*|*P*|*P*|
-|---|---|-----------------------------|---|---|
-| 0 | 0 | 0                           | 0 | 0 |
-| 0 | 1 | 0                           | 0 | 0 |
-| 1 | 0 | 1                           | 1 | 1 |
-| 1 | 1 | 1                           | 1 | 1 |
+|*P*|*Q*|*P&or;(&not;Q&and;Q)*|*P*|*P*|
+|---|---|---------------------|---|---|
+| 0 | 0 | 0                   | 0 | 0 |
+| 0 | 1 | 0                   | 0 | 0 |
+| 1 | 0 | 1                   | 1 | 1 |
+| 1 | 1 | 1                   | 1 | 1 |
 
 if we spot a row where our premises are true but the conclusion is false that means that the argument is invalid, in our case we can see that when our premises are true our conclusion is also true, that means that our argument is valid.
 
