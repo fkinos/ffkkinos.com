@@ -105,4 +105,4 @@ if we let P(x) stand for "x is bigger than or equal to zero".
 
 the statement &forall;x&isin;&Nopf;P(x) (for all x in the natural numbers, P(x)) is true. all values of x in the natural numbers are bigger than or equal to zero.
 
-the statement &forall;x&isin;&Zopf;P(x) (there's at least one x such that P(x)) is false. the integers include negative numbers which make P(x) false.
+the statement &forall;x&isin;&Zopf;P(x) (for all x in the integers, P(x)) is false. the integers include negative numbers which makes P(x) false.
