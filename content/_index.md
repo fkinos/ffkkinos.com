@@ -21,11 +21,9 @@ Check them out:
 
 that's me!
 
-i'm not that interesting, I just like to learn new things, be them in software,
-math, design, urbanism, etc.
-
-you can also check my [now](/now) and [uses](/uses) pages!
+i'm not that interesting, i just like to learn new things, be them in software,
+math, design, urbanism, etc. i also have a [now](/now) page!
 
 {{< rawhtml >}}
-<p>You can find me on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">mastodon</a>.</p>
+<p>find me on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">mastodon</a>.</p>
 {{< /rawhtml >}}
