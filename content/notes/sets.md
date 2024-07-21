@@ -33,6 +33,14 @@ SUBSET. we can also say that A&sube;B (A is a subset of B). meaning that every e
 
 in this example the set A&cap;B is a subset of A and also a subset of B, since both sets contain all elements of A&cap;B, which in this example is just the number 3.
 
+ELEMENT. we can say that x&isin;A (x is an element of A). meaning that an object x is contained by the set A.
+
+in this example 2&isin;A and 4&isin;B.
+
+NOT AN ELEMENT. we can also say that x&notin;A (x is not an element of A). meaning that an object x is not contained in the set A.
+
+in this example 9&notin;A.
+
 ## applications
 
 sets are pretty handy to represent anything you want, all of mathematics is built upon the notion of sets anyway.
