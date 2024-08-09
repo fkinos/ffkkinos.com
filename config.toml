@@ -4,3 +4,4 @@ title = "ffkkinos"
 theme = "nanika"
 tableOfContents = true
 enableGitInfo = true
+pluralizelisttitles = false
