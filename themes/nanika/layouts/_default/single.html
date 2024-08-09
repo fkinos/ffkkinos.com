@@ -1,15 +1,11 @@
 {{ define "main" }}
 
-{{ if (eq .Parent.Page.Path "/notes") }}
-<h1 class="heading visually-hidden">{{ .Title }}</h1>
-{{ else }}
-<h1 class="heading">{{ .Title }}</h1>
-{{ end }}
+<article>
 
-{{ if .Params.toc }}
-{{ .TableOfContents }}
-{{ end }}
+  <h2>{{ .Title }}</h2>
 
-{{ .Content }}
+  {{ .Content }}
+
+</article>
 
 {{ end }}

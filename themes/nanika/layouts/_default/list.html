@@ -1,12 +1,15 @@
 {{ define "main" }}
+
+<main>
+  <h1>{{ .Path }}</h1>
+
   {{ .Content }}
 
-  <h1 class="heading"> {{ .Title }} </h1>
+  {{ range .Pages }}
+    <a href="{{ .RelPermalink }}">{{ .Date.Format "02/01" }}: {{ .LinkTitle }} →</a>
+    <br>
+  {{ end }}
 
-  <ul>
-    {{ range .Pages }}
-      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-    {{ end }}
-  </ul>
+</main>
 
 {{ end }}
