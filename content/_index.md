@@ -3,27 +3,20 @@ date = "2024-03-09T00:00:00-03:00"
 title = "ffkkinos"
 +++
 
-## notes
+Hi, I'm Felipe!
 
-sometimes I write about things I find interesting like math and computers.
-
-here are some notes:
-{{< posts "notes" >}}
-
-## projects
-
-i wrote some small projects to solve even smaller problems.
-
-Check them out:
-{{< posts "projects" >}}
-
-## felipe
-
-that's me!
-
-i'm not that interesting, i just like to learn new things, be them in software,
-math, design, urbanism, etc. i also have a [now](/now) page!
+I like mathematics, permaculture, computing, design, architecture and urbanism, and many more topics I accidentally come across while researching something else.
 
 {{< rawhtml >}}
-<p>find me on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">mastodon</a>.</p>
+
+<p>I'm somewhat active on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">Mastodon</a>.</p>
+
 {{< /rawhtml >}}
+
+## [Wiki →](/wiki)
+
+{{< listing "wiki" >}}
+
+## [Computer Programs →](/computer-programs)
+
+{{< listing "computer-programs" >}}

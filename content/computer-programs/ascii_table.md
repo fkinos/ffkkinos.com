@@ -1,6 +1,6 @@
 +++
 date = "2024-04-09T00:00:00-03:00"
-title = "ascii table"
+title = "ASCII Table"
 +++
 
 some time ago, when i was playing with binary formats,
