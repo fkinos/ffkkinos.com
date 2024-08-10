@@ -158,10 +158,75 @@ As an exercise, give it a try at constructing truth tables for these last two mo
 
 ### Analizyng Statements with Truth Tables
 
+We can make use of truth tables to figure if a conclusion is true.
+
+If we have that P&or;Q, then later we gather that P, therefore P.
+We can express that same idea with the following table:
+
+|**P**|**Q**|**P&or;Q**|**P**|**P**|
+|-----|-----|----------|-----|-----|
+|  F  |  F  |  F       | F   | F   |
+|  F  |  T  |  T       | F   | F   |
+|  T  |  F  |  T       | T   | T   |
+|  T  |  T  |  T       | T   | T   |
+
+Here we have both propositions used, P and Q, the expression P&or;Q, P as our premise, and P as our conclusion.
+
+If our conclusion is true when our premises are true, then we have a valid argument.
+
+And as we can see in this example, when P (premise) is true, P (conclusion) is also true, obviously, so we have a valid argument!
+
 ## Existencial and Universal Quantifiers
 
-### There exists
+Let's consider P(x), where P(x) stands for "x is a prime number".
 
-### For all
+The logical connectives we've used so far are not sufficient to express P(x) correctly.
 
-## Bounds
+Luckily the existencial and universal quantifiers let's expand what we can express logically.
+
+### *There exists*
+
+Using the existencial quantifier we could say that there exists at least some value of x such that P(x) is true.
+
+Simbolically we could write the same as &exist;xP(x).
+
+### *For all*
+
+Using the universal quantifier we could say that for all values of x P(x) is true.
+
+Symbolically we could write the same as &forall;xP(x).
+
+### Example
+
+"x is greater than or equal to zero"
+
+*Existencial*:
+
+"There exists at least some value of x such that x is greater than or equal to zero" or &exist;xP(x) where P(x) stands for "x is greater than or equal to zero".
+
+*Universal*:
+
+"For all values of x, x is greater than or equal to zero" or &forall;xP(x) where P(x) stands for "x is greater than or equal to zero".
+
+## Universe of Discourse
+
+Think about whether or not the last example is true or false using both quantifiers.
+
+Well, *it depends*!
+
+"There exists at least some value of x such that x is greater than or equal to zero" sounds like it's also true, right?
+There's always some number bigger than or at least equal to zero,
+but we need to be careful,
+it's validity changes whenever we change our universe of discourse.
+
+The universe of discourse of some statement tells us about what to focus on, sometimes we just want to say something about the natural number and sometimes we might want to express say something about all real numbers or whatever other [set](/wiki/sets) you're working with.
+
+### Bounded Statements
+
+Bounded statements allow us to restrict our statements to only apply to the objects we care about.
+
+Using the same examples used in the quantifiers section we have that P(x) stands for "x is greater than or equal to zero".
+
+To specify that this statement is only talking about natural numbers we could write it as &exist;x&in;&naturals;P(x) or "There exists at least some x in the natural number such that x is greater than or equal to zero". This statement is true!
+
+What about the following statement? &forall;x&in;&reals;P(x) or "For all values of x where x belongs to the set of real numbers, x is greater than or equal to zero". This statement is false!
