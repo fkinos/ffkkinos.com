@@ -8,7 +8,7 @@ they call themselves inside their definition.
 
 But even though some function might be recursive the algorithm it implements by be effectively iterative.
 
-Let's see how this work while implementing factorial in code:
+Let's see how this work while implementing factorial in code, here will be using [Lisp](/wiki/lisp) but the concept should apply to pretty much all languages.
 
 ```
 (define (fact n)
