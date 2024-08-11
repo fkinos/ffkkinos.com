@@ -36,3 +36,13 @@ thead th {
   width: 3em;
   font-weight: normal;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+  }
+
+  pre {
+    background: #111;
+  }
+}
