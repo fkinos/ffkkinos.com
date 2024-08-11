@@ -5,9 +5,7 @@ title = "Naive Set Theory"
 
 A sets is a collection of mathematical objects. The order doesn't matter and we ignore duplicates.
 
-<!-- Here's another set C = {} containing no objects. It's empty. There's only one empty set and it's denoted by the symbol &empty;. -->
-
-<!-- When naming our sets, by convention, we usually start with the letters A, B, C, and so on. -->
+We say that A = { 1, 2, 3 } is a set. We list all object contained in the set and delimit it with curly braces.
 
 ## Elements
 
@@ -52,6 +50,10 @@ We say that A *is a subset of* B if all elements of A are also elements of B.
 
 Let A = { 1, 2 } and B = { 1, 2, 3, 4, 5 }. Here A *is a subset of* B or A&sub;B.
 
+## Empty Set
+
+The empty set, or {}, or &empty; is a set containing no elements, there isn't a single object that is an element of &empty;
+
 ## Set-Builder and Set-Roster Notation
 
 All the sets we've seen so far are discribed by listing out all its elements,
@@ -87,3 +89,13 @@ The power set of a set contains all possible subsets of that set. Let A = { 1, 2
 The empty set is a subset of all sets.
 
 ## Famous Sets
+
+The set of natural numbers contains all numbers bigger than or equal to 1. Sometimes zero is also included in this set. &naturals; = { 1, 2, 3, 4, 5, … }.
+
+The set of integers contains all the positives, negatives, and zero. &integers; = { 1, 2, 3, 4, 5, … }.
+
+The set of rational numbers contains all numbers that can be expressed as some number integer *a* over another integer *b*. &rationals; = { …, -2/4, -1, 0, 1, 1/2, 3/2, … }.
+
+The set of irrational numbers, that is, numbers that cannot be expressed as a fraction of two integers don't have a consistent letter associated with them, most of the time a capital I is used. Irrationals = { …, &Sqrt;2, 3, &pi;, … }.
+
+Then there's the set of real numbers, it's just the union of all these previous sets. &reals; = { …, -3, 0, 1, 3/2, &Sqrt;2, 3, &pi;, … }.
