@@ -11,6 +11,8 @@ I like mathematics, permaculture, computing, design, architecture and urbanism, 
 
 <p>I'm somewhat active on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">Mastodon</a>.</p>
 
+{{< lastchanged >}}
+
 {{< /rawhtml >}}
 
 ## [Wiki →](/wiki)
