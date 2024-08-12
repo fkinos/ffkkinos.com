@@ -1,0 +1,5 @@
+<p>
+  {{ $text := .Get 0 }}
+  {{ $dateFormat := .Get 1 }}
+  {{$text}} {{ .Page.Lastmod.Format $dateFormat }}.
+</p>
