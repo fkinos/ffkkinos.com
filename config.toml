@@ -5,3 +5,6 @@ theme = "nanika"
 tableOfContents = true
 enableGitInfo = true
 pluralizelisttitles = false
+
+[frontmatter]
+    lastmod = ["lastmod", ":git", "date", "publishDate"]
