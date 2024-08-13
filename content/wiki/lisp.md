@@ -1,6 +1,6 @@
 +++
 date = "2024-08-10T00:00:00-03:00"
-title = "Lisp and Simbolically Computation"
+title = "Lisp and Symbolic Computation"
 +++
 
 Programming in Lisp is like having a conversation with the computer, developing a close relantionship with the interpreter is very important.
