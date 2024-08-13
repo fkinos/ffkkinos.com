@@ -1,0 +1,4 @@
+{{ range (where .Site.RegularPages "Type" "past").Reverse }}
+  <p>{{ .Page.Lastmod.Format "02/01" }}:</p>
+  {{ .Page.Content }}
+{{ end }}
