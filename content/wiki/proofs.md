@@ -23,6 +23,16 @@ we sketch out some possibilities, remind ourselves of the relevant definitions, 
 
 This is usually called *scratch work*, in this page we will showcase all the *scratch work* involved on proving some theorem.
 
+## Tradition
+
+After we've proved some theorem let's mark it with an X, think of it as marking this theorem as done on a imaginary theorems checklist containing all theorems we will prove someday!
+
+Everyone likes to end their proofs in some particular way,
+some end it with [QED](https://en.wikipedia.org/wiki/Q.E.D.),
+other with a little square, others with a filled square, and so on.
+
+Just make sure you signal to your reader when your proof ends.
+
 ## Proof Techniques
 
 ### Direct Proof
@@ -56,7 +66,7 @@ in other words, a+b is even.
 
 After figuring out all of this we are ready to prove this theorem!
 
-**Proof**. Suppose a and b are even. That means a=2m for some integer m, and b=2n for some integer n. So a+b=2m+2n=2(m+n). Thus a+b=2k where k=m+n and k is an integer. Therefore, if a and b are even, then a+b is even.
+**Proof**. Suppose a and b are even. That means a=2m for some integer m, and b=2n for some integer n. So a+b=2m+2n=2(m+n). Thus a+b=2k where k=m+n and k is an integer. Therefore, if a and b are even, then a+b is even. X
 
 The proofs themselves are way more concise and don't include a lot of the details,
 that's why it's important to learn to write them ourselves so we can understand proofs written by others.
@@ -80,7 +90,7 @@ In this case Q is c&le;0 so &not;Q is c>0, and P is ac&le;bc so &not;P is ac>bc.
 
 Looking at the theorem again, it tells us that a>b. Multiplying both sides by c gets us ac>bc, which is our new goal!
 
-**Proof**. We will prove the contrapositive. Suppose c>0. Multiplying both sides of the given inequality a>b by c we can conclude that ac>bc. Therefore, if ac&le;bc, then c&le;0.
+**Proof**. We will prove the contrapositive. Suppose c>0. Multiplying both sides of the given inequality a>b by c we can conclude that ac>bc. Therefore, if ac&le;bc, then c&le;0. X
 
 ### Proof By Contradiction
 
