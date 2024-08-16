@@ -37,7 +37,7 @@ Just make sure you signal to your reader when your proof ends.
 
 ### Direct Proof
 
-When proving some goal of the form P→Q (P implies Q, or If P, then Q) we can assume P and use it to prove Q.
+When proving some goal of the form P implies Q (or If P, then Q) we can assume P and use it to prove Q.
 
 Let's see this in action with the following example.
 
@@ -73,7 +73,7 @@ that's why it's important to learn to write them ourselves so we can understand 
 
 Let's work on another example.
 
-**Theorem**. Suppose A&sube;C, and B and C are disjoint. Prove that if x&in;A then x&notin;B.
+**Theorem**. Suppose A is a subset of C, and B and C are disjoint. Prove that if x is in A then x is not in B.
 
 *Scratch Work*
 
@@ -81,44 +81,45 @@ There's a lot to unpack here.
 
 Let's remind ourselves of all the things the theorem asks for.
 
-A set A is a subset of a set B if all elements of A are also in B. We write that as A&sube;B.
+A set A is a subset of a set B if all elements of A are also in B.
 
-Two sets A and B are said to be disjoint if their intersection is the empty set. In other words, they have no elements in common. We write that as B and C disjoint or B&cap;C=&empty;.
+Two sets A and B are said to be disjoint if their intersection is the empty set. In other words, they have no elements in common.
 
-An element x is part of the set A if A contains x. We write that as x&in;A.
+An element x is part of the set A if A contains x, that's the same to say that x is in A.
 
 The theorem tells us that A is a subset of C and that B and C are disjoint. We can use these facts to our advantage.
 
-Using our strategy for P&rarr;Q forms, let's assume P to prove Q. In this example, so let's assume that x&in;A to prove that x&notin;B.
+Using our strategy for P implies Q forms, let's assume P to prove Q. So let's assume that x is in A to prove that x not in B.
 
-We know that x&in;A, but we also know that A&sube;C, so it's fair to conclude that x&in;C as well.
+We know that x is in A, but we also know that A is a subset C, so it's fair to conclude that x is in C as well.
 
-But wait a second, the theorem says that B and C are disjoint, therefore if x&in;C it cannot possibly be an element of B.
+But wait a second, the theorem says that B and C are disjoint, therefore if x is in C it cannot possibly be an element of B.
 
 That's really all we need! It wasn't that hard, right!
 
-**Proof**. Suppose x&in;A. Since A&sube;C we can conclude that x&in;C. But B and C are disjoint, therefore x cannot possibly be an element of B. X
+**Proof**. Suppose x is in A. Since A is a subset of C we can conclude that x is in C. But B and C are disjoint, therefore x cannot possibly be an element of B. X
 
 ### Proof By Contrapositive
 
-When proving some goal of the form &not;Q&rarr;&not;P (not Q implies not P, or if not Q then not P) we can assume &not;Q and use it to prove &not;P.
+When proving some goal of the form not Q implies not P (or if not Q then not P) we can assume not Q and use it to prove not P.
 
-We can also use this technique on some goal of the form P&rarr;Q since P&rarr;Q and &not;Q&rarr;&not;P are logically equivalent.
+We can also use this technique on some goal of the form P implies Q since P implies Q and not Q implies not P are logically equivalent.
 
 Let's see this in action with the following example.
 
-**Theorem**. Let a, b, and c be real numbers and a > b. If ac&le;bc, then c&le;0.
+**Theorem**. Let a, b, and c be real numbers and a > b. If ac<=bc, then c<=0.
 
 *Scratch Work*
 
 We will prove using the contrapositive,
-which means that we are going to assume &not;Q to prove &not;P.
+which means that we are going to assume not Q to prove not P.
 
-In this case Q is c&le;0 so &not;Q is c>0, and P is ac&le;bc so &not;P is ac>bc. Thus, if c>0, then ac>bc. But look, this has the form P&rarr;Q, so we can assume P and use it to prove Q! So let's assume c>0.
+In this case Q is c<=0 so not Q is c>0, and P is ac<=bc so not P is ac>bc. Thus, if c>0, then ac>bc. But look, this has the form P implies Q, so we can assume P and use it to prove Q! So let's assume c>0.
 
-Looking at the theorem again, it tells us that a>b. Multiplying both sides by c gets us ac>bc, which is our new goal!
+Looking at the theorem again, it tells us that a>b.
+Multiplying both sides by c gets us ac>bc, which is our new goal!
 
-**Proof**. We will prove the contrapositive. Suppose c>0. Multiplying both sides of the given inequality a>b by c we can conclude that ac>bc. Therefore, if ac&le;bc, then c&le;0. X
+**Proof**. We will prove the contrapositive. Suppose c>0. Multiplying both sides of the given inequality a>b by c we can conclude that ac>bc. Therefore, if ac<=bc, then c<=0. X
 
 ### Proof By Contradiction
 
