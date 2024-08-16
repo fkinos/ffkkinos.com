@@ -71,6 +71,34 @@ After figuring out all of this we are ready to prove this theorem!
 The proofs themselves are way more concise and don't include a lot of the details,
 that's why it's important to learn to write them ourselves so we can understand proofs written by others.
 
+Let's work on another example.
+
+**Theorem**. Suppose A&sube;C, and B and C are disjoint. Prove that if x&in;A then x&notin;B.
+
+*Scratch Work*
+
+There's a lot to unpack here.
+
+Let's remind ourselves of all the things the theorem asks for.
+
+A set A is a subset of a set B if all elements of A are also in B. We write that as A&sube;B.
+
+Two sets A and B are said to be disjoint if their intersection is the empty set. In other words, they have no elements in common. We write that as B and C disjoint or B&cap;C=&empty;.
+
+An element x is part of the set A if A contains x. We write that as x&in;A.
+
+The theorem tells us that A is a subset of C and that B and C are disjoint. We can use these facts to our advantage.
+
+Using our strategy for P&rarr;Q forms, let's assume P to prove Q. In this example, so let's assume that x&in;A to prove that x&notin;B.
+
+We know that x&in;A, but we also know that A&sube;C, so it's fair to conclude that x&in;C as well.
+
+But wait a second, the theorem says that B and C are disjoint, therefore if x&in;C it cannot possibly be an element of B.
+
+That's really all we need! It wasn't that hard, right!
+
+**Proof**. Suppose x&in;A. Since A&sube;C we can conclude that x&in;C. But B and C are disjoint, therefore x cannot possibly be an element of B. X
+
 ### Proof By Contrapositive
 
 When proving some goal of the form &not;Q&rarr;&not;P (not Q implies not P, or if not Q then not P) we can assume &not;Q and use it to prove &not;P.
