@@ -99,6 +99,27 @@ That's really all we need! It wasn't that hard, right!
 
 **Proof**. Suppose x is in A. Since A is a subset of C we can conclude that x is in C. But B and C are disjoint, therefore x cannot possibly be an element of B. X
 
+Let's do one more!
+
+**Theorem**. Let a and b be rational numbers. Prove that a+b is rational.
+
+*Scratch Work*
+
+Although implicit, this theorem has the form P implies Q. We could've written it as if a and b are rational, then a+b is rational.
+This means that we can use the same strategy we've used so far!
+
+Let's first remind ourselves about what a rational number even is.
+A rational number is some number that can be represented as a quotient of some integer a over another integer b, and b must be different than zero.
+In other words, it's some number n = (p/q) for some integer p and some integer q and q != 0.
+
+So we have that a+b = (p1/q1)+(p2/q2). Multiplying the left side by (q1/q1) and the right side by (q2/q2) we get a+b = (p1q2+p2q1)/(q1q2).
+
+But this is quotient, isn't it? We defined p1, p2, q1, and q2 to be integers so their sums and products are also integers. And q1 and q2 are non-zero integers so the denominator is also a non-zero integer.
+
+**Proof**. Suppose a and b are rational numbers. This means that a = (p1/q1) for some integer p1 and q1 and q1 != 0, and b = (p2/q2) for some integer p2 and q2 and q2 != 0. So a+b = (p1/q1)+(p2/q2) = (p1q2+p2q1)/(q1q2). Let p = p1q2+p2q1 and q = q1q2. Thus a+b = p/q where p is an integer and q is a non-zero integer. Therefore, if a and b are rational, a+b is rational.
+
+I personally like being overly verbose in my proofs, you can omit some details if you think there're obvious enough. Everyone writes proofs differently, it's an art form!
+
 ### Proof By Contrapositive
 
 When proving some goal of the form not Q implies not P (or if not Q then not P) we can assume not Q and use it to prove not P.
