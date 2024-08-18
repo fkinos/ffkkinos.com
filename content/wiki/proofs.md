@@ -116,7 +116,7 @@ So we have that a+b = (p1/q1)+(p2/q2). Multiplying the left side by (q1/q1) and 
 
 But this is quotient, isn't it? We defined p1, p2, q1, and q2 to be integers so their sums and products are also integers. And q1 and q2 are non-zero integers so the denominator is also a non-zero integer.
 
-**Proof**. Suppose a and b are rational numbers. This means that a = (p1/q1) for some integer p1 and q1 and q1 != 0, and b = (p2/q2) for some integer p2 and q2 and q2 != 0. So a+b = (p1/q1)+(p2/q2) = (p1q2+p2q1)/(q1q2). Let p = p1q2+p2q1 and q = q1q2. Thus a+b = p/q where p is an integer and q is a non-zero integer. Therefore, if a and b are rational, a+b is rational.
+**Proof**. Suppose a and b are rational numbers. This means that a = (p1/q1) for some integer p1 and q1 and q1 != 0, and b = (p2/q2) for some integer p2 and q2 and q2 != 0. So a+b = (p1/q1)+(p2/q2) = (p1q2+p2q1)/(q1q2). Let p = p1q2+p2q1 and q = q1q2. Thus a+b = p/q where p is an integer and q is a non-zero integer. Therefore, if a and b are rational, a+b is rational. X
 
 I personally like being overly verbose in my proofs, you can omit some details if you think there're obvious enough. Everyone writes proofs differently, it's an art form!
 
