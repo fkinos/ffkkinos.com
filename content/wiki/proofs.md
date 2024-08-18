@@ -109,7 +109,7 @@ Although implicit, this theorem has the form P implies Q. We could've written it
 This means that we can use the same strategy we've used so far!
 
 Let's first remind ourselves about what a rational number even is.
-A rational number is some number that can be represented as a quotient of some integer a over another integer b, and b must be different than zero.
+A rational number is some number that can be represented as a quotient of some integer p over another integer q, and q must be different than zero.
 In other words, it's some number n = (p/q) for some integer p and some integer q and q != 0.
 
 So we have that a+b = (p1/q1)+(p2/q2). Multiplying the left side by (q1/q1) and the right side by (q2/q2) we get a+b = (p1q2+p2q1)/(q1q2).
