@@ -3,6 +3,14 @@ date = "2024-08-16T00:00:00-03:00"
 title = "Books"
 +++
 
+## Design
+
+### User Interface
+
+The study of human-computer interaction and how to better design interfaces to adjust to the way humans work.
+
+- The Humane Interface by Raskin
+
 ## Mathematics
 
 ### Algorithms and Computational Thinking
