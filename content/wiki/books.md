@@ -34,10 +34,10 @@ Check out the [proofs](/wiki/proofs) page.
 Linear algebra is concerned with a pretty limited set of equations, linear equations, hence the creative name!
 Even with this limited scope it's still a beatiful topic and has a large number of applications.
 
+- Elementary Linear Algebra by Anton and Rorres
 - Linear Algebra Done Wrong by Treil
 
 The following books expect you to be comfortable reading and writing proofs.
 
 - Linear Algebra Done Right by Axler
 - Linear Algebra by Friedberg, Insel, and Spence
-- Elementary Linear Algebra by Anton and Rorres
