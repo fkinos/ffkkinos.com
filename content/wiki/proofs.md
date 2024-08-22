@@ -144,4 +144,24 @@ Multiplying both sides by c gets us ac>bc, which is our new goal!
 
 ### Proof By Contradiction
 
+When proving some theorem by contradiction we assume P is false and try to get to a contradiction. If we get to a contradiction using valid logic rules and inferences that means that our initial hypothesis was false. Therefore, if we get to a contradiction assuming P is false then P must be true.
+
+**Theorem**. The empty set is subset of every set.
+
+*Scratch Work*
+
+Let's remind ourselves of some definitions.
+
+The empty set is defined to be the set with no elements.
+
+We say that A is a subset of B if every element of A is also an element of B.
+
+Using these definitions we can conclude that every element in the empty set must be also in some set A.
+We can assume the opposite, that the empty set is not a subset of A.
+This means that there must exist some element of the empty set that is not in A.
+But here we contradict the very own definition of the empty set.
+Thus, we've reached a contradiction!
+
+**Proof**. Suppose &empty; is not a subset of A. This means that there exists some x in &empty; such that x is not in A. Note x in &empty; is absurd, a contradiction. Thus, the empty set is a subset of every set. X
+
 ### Proof By Induction
