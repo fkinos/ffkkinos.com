@@ -9,7 +9,7 @@ I like mathematics, permaculture, computing, design, architecture and urbanism, 
 
 {{< rawhtml >}}
 
-<p>I'm somewhat active on <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">Mastodon</a>.</p>
+<p>Feel free to message me on the <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">Fediverse ⁂</a>.</p>
 
 {{< lastchanged >}}
 
