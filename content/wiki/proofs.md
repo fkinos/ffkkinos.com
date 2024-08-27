@@ -71,54 +71,11 @@ After figuring out all of this we are ready to prove this theorem!
 The proofs themselves are way more concise and don't include a lot of the details,
 that's why it's important to learn to write them ourselves so we can understand proofs written by others.
 
-Let's work on another example.
+Try to prove the following problems! If you're stuck I can help you, [just send me a message on the fediverse](https://merveilles.town/@fkinoshita).
 
 **Theorem**. Suppose A is a subset of C, and B and C are disjoint. Prove that if x is in A then x is not in B.
 
-*Scratch Work*
-
-There's a lot to unpack here.
-
-Let's remind ourselves of all the things the theorem asks for.
-
-A set A is a subset of a set B if all elements of A are also in B.
-
-Two sets A and B are said to be disjoint if their intersection is the empty set. In other words, they have no elements in common.
-
-An element x is part of the set A if A contains x, that's the same to say that x is in A.
-
-The theorem tells us that A is a subset of C and that B and C are disjoint. We can use these facts to our advantage.
-
-Using our strategy for P implies Q forms, let's assume P to prove Q. So let's assume that x is in A to prove that x not in B.
-
-We know that x is in A, but we also know that A is a subset C, so it's fair to conclude that x is in C as well.
-
-But wait a second, the theorem says that B and C are disjoint, therefore if x is in C it cannot possibly be an element of B.
-
-That's really all we need! It wasn't that hard, right!
-
-**Proof**. Suppose x is in A. Since A is a subset of C we can conclude that x is in C. But B and C are disjoint, therefore x cannot possibly be an element of B. X
-
-Let's do one more!
-
 **Theorem**. Let a and b be rational numbers. Prove that a+b is rational.
-
-*Scratch Work*
-
-Although implicit, this theorem has the form P implies Q. We could've written it as if a and b are rational, then a+b is rational.
-This means that we can use the same strategy we've used so far!
-
-Let's first remind ourselves about what a rational number even is.
-A rational number is some number that can be represented as a quotient of some integer p over another integer q, and q must be different than zero.
-In other words, it's some number n = (p/q) for some integer p and some integer q and q != 0.
-
-So we have that a+b = (p1/q1)+(p2/q2). Multiplying the left side by (q1/q1) and the right side by (q2/q2) we get a+b = (p1q2+p2q1)/(q1q2).
-
-But this is quotient, isn't it? We defined p1, p2, q1, and q2 to be integers so their sums and products are also integers. And q1 and q2 are non-zero integers so the denominator is also a non-zero integer.
-
-**Proof**. Suppose a and b are rational numbers. This means that a = (p1/q1) for some integer p1 and q1 and q1 != 0, and b = (p2/q2) for some integer p2 and q2 and q2 != 0. So a+b = (p1/q1)+(p2/q2) = (p1q2+p2q1)/(q1q2). Let p = p1q2+p2q1 and q = q1q2. Thus a+b = p/q where p is an integer and q is a non-zero integer. Therefore, if a and b are rational, a+b is rational. X
-
-I personally like being overly verbose in my proofs, you can omit some details if you think there're obvious enough. Everyone writes proofs differently, it's an art form!
 
 ### Proof By Contrapositive
 
