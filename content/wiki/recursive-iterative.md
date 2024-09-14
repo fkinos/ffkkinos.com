@@ -4,12 +4,17 @@ title = "Recursive And Iterative Algorithms on Recursive Functions"
 +++
 
 Recursive functions get their name from the fact that they're defined on terms of themselves, that is,
-they call themselves inside their definition.
+they call themselves inside their own definitions.
 
-But even though some function might be recursive the algorithm it implements by be effectively iterative.
+But even though some function might be recursive the algorithm it implements might be effectively iterative, meaning that it's as efficient as ordinary loops while having a more understandable recursive definition!
 
 Let's see how this work while implementing factorial in code, here will be using [Lisp](/wiki/lisp) but the concept should apply to pretty much all languages.
 
+## Factorial Example
+
+We will define two functions that compute the factorial of some number, both of them will be recursive, in the sense that they call themselves, but one of them will implement a recursive algorithm and the other one will implement a iterative algorithm.
+
+Let's take a look at the recursive algorithm first!
 ```
 (define (fact n)
   (if (<= n 1)
@@ -17,12 +22,26 @@ Let's see how this work while implementing factorial in code, here will be using
       (* n (fact (- n 1)))))
 ```
 
-Here we check if *n* is less than or equal to 1, if so we return 1, otherwise we return *n* times the result of calling *fact* with *n* minus 1.
+It's pretty straight-forward, we check if `n` is less than or equal to 1, if so we return 1, otherwise we return `n` times the result of `fact` with one less than `n`.
 
-Let's see what shape each call to *fact* produces:
+Now we will walk through each call to `fact` to see how it behaves and expands.
 
+The first it's called it just receives whatever number we passed to it, in this example, `n` equals 4.
 ```
 (fact 4)
+```
+
+Since 4 is greater than 1 it will skip the base case and expand with a call to `fact` with one less than `n`, as per the definition.
+```
+(* 4 (fact (- 4 1)))
+```
+Evaluating the arguments to `fact` we get:
+```
+(* 4 (fact 3))
+```
+
+This pattern continues until we reach the base case of `n` being less than or equal to 1:
+```
 (* 4 (fact 3))
 (* 4 (* 3 (fact 2)))
 (* 4 (* 3 (* 2 (fact 1))))
@@ -32,10 +51,11 @@ Let's see what shape each call to *fact* produces:
 24
 ```
 
-On each iteration we defer some computation to do afterwards, we connot compute them without first evaluating what the next value of *fact* is.
+The computation *grows*, producing this sort of triangular shape of deferred computations we can't still answer, up until the last recursive call.
 
-Let's contrast it with this other implementation of factorial:
+Only after evaluating each recursive call we were able to perform the calculation, it wouldn't be able to do the calculation without first calculating what the next value of `fact` is.
 
+Let's contrast it with the other implementation of factorial, using a iterative algorithm:
 ```
 (define (fact acc n)
   (if (<= n 1)
@@ -43,10 +63,9 @@ Let's contrast it with this other implementation of factorial:
       (fact (* acc n) (- n 1))))
 ```
 
-Here we check if *n* is less than or equal to 1, if so we return *acc* (standing for accumulator), otherwise we call *fact* again passing in *acc* times *n* and *n* minus 1.
+It's a bit more complicated than the last one, we are building up the result of `(* acc n)` in one of the function's parameters, while decreasing `n` with each call. When we reach the base case we simply return that parameter.
 
-Let's see what shape each call to *fact* this implementation produces:
-
+Let's see what pattern the calls of this version of factorial produces:
 ```
 (fact 1 4)
 (fact 4 3)
@@ -55,18 +74,8 @@ Let's see what shape each call to *fact* this implementation produces:
 24
 ```
 
-We are no longer deferring some computation to do afterwards, we only need the arguments passed to *fact* in order to compute the next value.
+Just by looking at the *shape* of this algorithm we can already see a pretty big difference.
+
+We no longer defer computations, we can compute everything by only using the parameters that were passed in.
 
 So even though both functions are recursive in nature, that is, they call themselves in their definitions, they produce very different shapes.
-
-## Tail Position
-
-On our second implementation calls itself the *tail position*, that is, as the last action that procedure will execute. We no longer need to *remember* to do those deferred computations, all we need is available through the procedure's parameters.
-
-Our first implementation, in the other hand, doesn't call itself as the last action, it's called inside a multiplication operation. We cannot possibly compute the value of the multiplication operation without evaluating subsequent calls to *fact*, thus we build this chain of deffered computations.
-
-## Space and Time
-
-Our first implementation is said to be linear in time, the time it takes is linear to its argument *n*. It's also linear in space, it *grows* more depending on the value of *n*.
-
-The second implementation is also linear in time but it's constant on space, it doesn't need to *grow* as much.
