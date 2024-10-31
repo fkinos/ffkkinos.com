@@ -5,6 +5,6 @@ title = "Now"
 
 A "now page" is somewhere to share things you're currently doing, [learn more about them here](https://nownownow.com/about).
 
-Here's a collection of previous "now" updates, usually called the past.
+Here's a collection of previous "now" updates, I like to call it "The Past".
 
 {{< archive >}}
