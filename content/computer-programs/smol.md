@@ -1,7 +1,12 @@
 +++
 date = "2024-10-31T00:00:00-03:00"
 title = "Smol"
+image = true
 +++
+
+![Screenshot of Smol applications running](/smol.png)
+
+# Smol
 
 Smol is a small collections of small applications for your desktop.
 
@@ -10,8 +15,6 @@ Currently Smol provides the following applications:
 - a calendar
 - a clock
 - a rotating cube (because it's fun)
-
-![Screenshot of Smol applications running](/smol.png)
 
 ## Source Code
 
