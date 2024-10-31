@@ -1,26 +1,17 @@
 +++
 date = "2024-04-09T00:00:00-03:00"
-title = "ASCII Table"
+title = "ASCII"
 +++
 
-some time ago, when i was playing with binary formats,
-i was struggling a lot with ASCII values,
-specially when represented with hexadecimal numbers.
+The man page for ASCII has a pretty neat table showing all ASCII characters, with both decimal and hexidecimal representations, and it's great and all but there's one problem, it's a the bottom of the manual page, making it less than ideal to use it as a quick reference.
 
-around the same time,
-someone over at mastodon (I don't remember who it was, sorry)
-shared that the man page for ASCII had a neat table, including both decimal and hexidecimal representions.
-And it's great, the only problem is that it's at the bottom of the manual, making it less than ideal to use it as a quick reference.
+So I created a small command-line application that does just that, displays an ASCII table.
 
-that's when I decided to build a small commandline application to make the same!
+## ii
 
-## asc*ii*-table
-the binary for the application is called _ii_,
-originally I wanted to call it _ascii_ but that name was already taken.
+The command is called _ii_, as in asc*ii*.
 
-By default, _ii_ shows the ASCII table using hexadecimal values,
-i made it that way because i wanted to practice reading hexadecimal,
-and also the table itself is shorter.
+By default, *ii* shows the ASCII table using hexadecimal values:
 
 ```
 % ii
@@ -44,7 +35,10 @@ E: . > N ^ n ~
 F: / ? O _ o DEL
 ```
 
-using the `-d` or `--dec` flag, it displays the ASCII table with decimal values.
+It's also possible to specify hexadecimal output with the `-x` or `--hex` flags.
+
+Using the `-d` or `--dec` flags, it outputs the ASCII table with decimal values instead:
+
 ```
 % ii --dec
   30 40 50 60 70 80 90 100 110 120
@@ -61,15 +55,14 @@ using the `-d` or `--dec` flag, it displays the ASCII table with decimal values.
 9: '  1  ;  E  O  Y  c  m   w
 ```
 
-## source Code
-the implementation is just over a hundred lines of ANSI C code.
-it includes a Makefile, all you need to do to install it is:
+## Source Code
+
+The implementation is just over a hundred lines of ANSI C code, to install it just simply run:
 
 ```
 % make && make install
 ```
 
-by default, it installs the binary to `/usr/local/bin/` but it can be easily overriden.
+By default, it installs the binary to `/usr/local/bin/` but it can be easily overriden with the `PREFIX` environment variable.
 
-you can find the full source code on
-[this repository](https://sr.ht/~fkinos/ascii-table) at [sr.ht](https://sr.ht).
+You can find the full source code at [this repository](https://sr.ht/~fkinos/ascii-table).
