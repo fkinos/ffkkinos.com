@@ -1,4 +1,4 @@
-{{ range first 5 (where .Site.RegularPages "Type" (.Get 0)) }}
+{{ range first 10 (where .Site.RegularPages "Type" (.Get 0)) }}
   <a href="{{ .Permalink }}">{{ .Date.Format "02/01" }}: {{ .Title }} →</a>
   <br>
 {{ end }}
