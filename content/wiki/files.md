@@ -12,9 +12,18 @@ Files is a file explorer program, like a file manager but without managing anyth
 
 It's pretty handy for exploring your forgotten file structure as doing that with `cd` and `ls` can become very tiring.
 
-## How It Works
+## How To Use It
 
-It's a simple loop, it fetchs files from a directory, once a new directory is selected it fetchs its files, and so on.
+You move up and down with the arrow keys, return or enter moves into the selected directory.
+
+The current directory is displayed at the bottom of the screen.
+
+### Shortcuts
+
+|                    |                                          |
+|--------------------|------------------------------------------|
+| `Up and Down keys` | Moves the cursor up and down accordingly |
+| `Return or Enter`  | Moves into the selected directory        |
 
 ## Source Code
 
