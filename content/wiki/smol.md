@@ -15,6 +15,8 @@ Currently Smol provides the following applications:
 - a calendar
 - a clock
 - a rotating cube (because it's fun)
+- a [PETSCII](https://en.wikipedia.org/wiki/PETSCII) painting program
+- [a file explorer](/wiki/files)
 
 ## Source Code
 

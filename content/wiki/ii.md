@@ -1,13 +1,11 @@
 +++
 date = "2024-04-09T00:00:00-03:00"
-title = "ASCII"
+title = "ii"
 +++
 
 The man page for ASCII has a pretty neat table showing all ASCII characters, with both decimal and hexidecimal representations, and it's great and all but there's one problem, it's a the bottom of the manual page, making it less than ideal to use it as a quick reference.
 
 So I created a small command-line application that does just that, displays an ASCII table.
-
-## ii
 
 The command is called _ii_, as in asc*ii*.
 

@@ -19,6 +19,7 @@ I like mathematics, permaculture, computing, design, architecture and urbanism, 
 
 {{< listing "wiki" >}}
 
-## [Computer Programs →](/computer-programs)
+## [Now →](/now)
 
-{{< listing "computer-programs" >}}
+Check my ["now" page](/now) to see what I've been doing recently,
+that is, if I even remembered to update it!
