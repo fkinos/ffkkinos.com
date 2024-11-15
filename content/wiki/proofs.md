@@ -5,9 +5,7 @@ title = "Proving Mathematical Statements"
 
 Throughout most of our mathematical carrers while studentents we don't necessarily know why or how mathematics works, it just does.
 
-We can deepen our understanding of mathmatics by learning to write and read proofs, mathematical arguments used to convince other mathematicians that some conclusion is true by the use of logic.
-
-To write and read proofs we need a good deal of natural language (english, portuguese, and so on), [Mathematical Logic](/wiki/logic), and a bit of [Set Theory](/wiki/sets).
+Let's deepen our understanding of mathematics by learning to write and read proofs, mathematical arguments used to convince other mathematicians that some conclusion is true by the use of [logic](/wiki/logic) and [set theory](/wiki/sets).
 
 ## Writing *Good* Proofs
 
