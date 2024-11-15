@@ -1,33 +1,21 @@
 +++
 date = "2024-11-12T00:00:00-03:00"
-title = "Paint"
+title = "paint"
 image = true
 +++
 
 ![Screenshot of a PETSCII drawing program](/paint.png)
 
-# Paint
+# Paint is a drawing program.
 
-Paint is a [PETSCII](https://en.wikipedia.org/wiki/PETSCII) drawing program,
-each character is typable on a conventional keyboard.
+Paint is a graphical [PETSCII](https://en.wikipedia.org/wiki/PETSCII) drawing program,
+using the character set used on Commodore machines but each character is typable on a conventional keyboard.
 
-## How To Use It
+You're presented with a 40x25 canvas and a cursor, typing any number, symbol, lowercase or uppercase letter changes your brush, pressing space paints the selected brush to the canvas.
 
-You're presented with a 40x25 canvas, a cursor, and a lot of characters, you can type any number, lowercase and uppercase letter to change your brush, the cursor is set to whatever character was just typed, pressing space paints the brush to the canvas.
-
-Moving the cursor to the edges of the canvas loops it to the opposite edge.
+Holding `Ctrl` changes the current brush to the corresponding character in the extra character set, which contains more drawing characters like boxes and lines.
 
 Using `Alt+0-9` you can change the foreground color a character is painted on, using `Alt+Shift+0-9` you can change the background color a character is placed on.
-
-### Shortcuts
-
-|                                  |                                                                          |
-|----------------------------------|--------------------------------------------------------------------------|
-| `Arrow Keys` | Moves the cursor up, down, left, and right accordingly                   |
-| `Space`                          | Paints selected character to canvas                                      |
-| `Alt+0-9`                        | Changes character foreground color                                       |
-| `Alt+Shift+0-9`                  | Changes character background color                                       |
-| `Ctrl`                           | Alternates between the default character set and the extra character set |
 
 ## Source Code
 
