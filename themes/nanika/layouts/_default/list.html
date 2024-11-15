@@ -6,7 +6,9 @@
   {{ .Content }}
 
   {{ range .Pages }}
-    <a href="{{ .RelPermalink }}">{{ .Date.Format "02/01" }}: {{ .LinkTitle }} →</a>
+    {{ $date := .Date.Format "2006-02-01" }}
+    <time datetime="{{ $date }}">{{ $date }}</time>
+    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
     <br>
   {{ end }}
 
