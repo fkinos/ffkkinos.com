@@ -1,29 +1,16 @@
 +++
 date = "2024-11-12T00:00:00-03:00"
-title = "Files"
+title = "files"
 image = true
 +++
 
 ![Screenshot of Files running](/files.png)
 
-# Files
+# Files is a file explorer.
 
-Files is a file explorer program, like a file manager but without managing anything.
+Files is a graphical file explorer created to make it easy to explore your forgotten filesystem. It doesn't affect the files and folders in any way, only exploring is possible.
 
-It's pretty handy for exploring your forgotten file structure as doing that with `cd` and `ls` can become very tiring.
-
-## How To Use It
-
-You move up and down with the arrow keys, return or enter moves into the selected directory.
-
-The current directory is displayed at the bottom of the screen.
-
-### Shortcuts
-
-|                    |                                          |
-|--------------------|------------------------------------------|
-| `Up and Down keys` | Moves the cursor up and down accordingly |
-| `Return or Enter`  | Moves into the selected directory        |
+You move up and down with the arrow keys, press return to move into the selected directory. The current directory is displayed at the bottom of the screen.
 
 ## Source Code
 
