@@ -9,17 +9,33 @@ I like mathematics, permaculture, computing, design, architecture and urbanism, 
 
 {{< rawhtml >}}
 
-<p>Feel free to message me on the <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">Fediverse ⁂</a>.</p>
-
-{{< lastchanged >}}
+<p>
+    Feel free to message me on the
+    <a href="https://merveilles.town/@fkinoshita" rel="me" target="_blank">Fediverse ⁂</a>
+    .
+</p>
 
 {{< /rawhtml >}}
 
-## [Wiki →](/wiki)
+{{< lastchanged >}}
+
+## Sometimes I write.
+
+I have a little personal wiki where I keep some notes on topics I like,
+mostly math and computer stuff.
+
+Here are the latest few:
 
 {{< listing "wiki" >}}
 
-## [Now →](/now)
+## Sometimes I create.
+
+I code some little retro-looking desktop applications and they make me happy,
+please check them out if that sounds interesting!
+
+[Code Repositories](https://sr.ht/~fkinos)
+
+## Now.
 
 Check my ["now" page](/now) to see what I've been doing recently,
 that is, if I even remembered to update it!
