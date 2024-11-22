@@ -1,6 +1,6 @@
-{{ range first 7 (where .Site.RegularPages "Type" (.Get 0)) }}
+{{ range first 3 (where .Site.RegularPages "Type" (.Get 0)) }}
   <a href="{{ .Permalink }}">{{ .Title }}</a>
   <br>
 {{ end }}
 
-<a href="/{{ .Get 0 }}">[…]</a>
+<a aria-label="See More" href="/{{ .Get 0 }}">[…]</a>
